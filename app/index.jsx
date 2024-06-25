@@ -2,7 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import { Redirect, router } from "expo-router";
 import { View, Text, Image, ScrollView } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-
+import 'react-native-url-polyfill/auto'
 import { images } from "../constants";
 import { CustomButton, Loader } from "../components";
 import { useGlobalContext } from "../context/GlobalProvider";
@@ -22,23 +22,25 @@ const Welcome = () => {
         }}
       >
         <View className="w-full flex justify-center items-center h-full px-4">
-          <Image
+          <View className="flex-row mt-2 mb-2 ">
+            <Image
             source={images.logo}
-            className="w-[130px] h-[84px]"
+            className="w-[40px] h-[60px]"
+            
             resizeMode="contain"
           />
-
+          <Text className="text-3xl font-bold text-gray-100 m-auto ml-3 ">Spycy</Text></View>
           <Image
             source={images.cards}
-            className="max-w-[380px] w-full h-[298px]"
+            className="max-w-[380px] w-full h-[260px] mt-5"
             resizeMode="contain"
           />
 
           <View className="relative mt-5">
-            <Text className="text-3xl text-white font-bold text-center">
+            <Text className="text-3xl text-white font-bold text-center m-auto ">
               Discover Endless{"\n"}
               Possibilities with{" "}
-              <Text className="text-secondary-200">Aora</Text>
+              <Text className="text-secondary-200">Spycy</Text>
             </Text>
 
             <Image
@@ -50,13 +52,13 @@ const Welcome = () => {
 
           <Text className="text-sm font-pregular text-gray-100 mt-7 text-center">
             Where Creativity Meets Innovation: Embark on a Journey of Limitless
-            Exploration with Aora
+            Exploration with Spycy
           </Text>
 
           <CustomButton
             title="Continue with Email"
             handlePress={() => router.push("/sign-in")}
-            containerStyles="w-full mt-7"
+            containerStyles="w-full mt-7 mb-5"
           />
         </View>
       </ScrollView>
