@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Link, router } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { View, Text, ScrollView, Dimensions, Alert, Image } from "react-native";
-
 import { images } from "../../constants";
 import { createUser } from "../../lib/appwrite";
 import { CustomButton, FormField } from "../../components";
@@ -53,7 +52,7 @@ const SignUp = () => {
             className="w-[115px] h-[54px] mb-[-15] ml-[-30]"
           /><Text className="text-4xl font-bold text-gray-100 mt-3  ml-[-18] ">Spycy</Text></View>
           <Text className="text-2xl font-semibold text-white mt-10 font-psemibold">
-            Sign Up to Aora
+            Sign Up to Spycy
           </Text>
 
           <FormField
