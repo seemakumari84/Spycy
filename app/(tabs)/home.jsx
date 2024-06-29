@@ -47,7 +47,7 @@ const Home = () => {
                   Welcome Back
                 </Text>
                 <Text className="text-2xl font-psemibold text-white">
-                  JSMastery
+                  Spycy
                 </Text>
               </View>
 
@@ -64,7 +64,7 @@ const Home = () => {
 
             <View className="w-full flex-1 pt-5 pb-8">
               <Text className="text-lg font-pregular text-gray-100 mb-3">
-                Latest Videos
+                Latest Food Items Videos
               </Text>
 
               <Trending posts={latestPosts ?? []} />
